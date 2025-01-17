@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>feliz Vida S2</title>
+</head>
+
+<body>
+    <div id="conteudo">
+        <h2>Qual é o melhor time do Brasil?</h2>
+        <form action="#" method="post">
+            <!-- Input do tipo imagem que age como botão -->
+            <input onclick="Desvia(this)"  onmouseover="Desvia(this)" type="image" src="https://logodownload.org/wp-content/uploads/2016/09/flamengo-logo-escudo-novo-3.png" alt="Imagem de Perfil" class="image-button" width="90" height="90">
+            <input onclick ="VASCO(event)" type="image" src="https://logodownload.org/wp-content/uploads/2016/09/vasco-logo-1.png" alt="Imagem de Perfil" class="image-button" width="90" height="90">
+       
+        </form>
+    </div>
+</body>
+<style>
+    #conteudo {
+        background: #8d1b1b;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 10px;
+        text-align: center;
+        font-family: sans-serif;
+    }
+
+    .btn {
+        background: black;
+        color: white;
+        border: none;
+        padding: 10px;
+        width: 90px;
+        border-radius: 20px;
+    }
+</style>
+
+<script>
+    function VASCO(event) {
+        event.preventDefault(); // Impede o comportamento padrão do botão de formulário
+        alert("Você entende mesmo de futebol! :)");
+        // redireciona para um URL após clicar no SIM
+        setTimeout(function() {
+            location.href = "https://youtu.be/N3LzC99epMU?si=Rcu7s22AYJ9Ut-gm";
+        }, 1000); // Redireciona após 1 segundo
+    }
+    function Desvia(btn) {
+        // btn declarado na função
+        btn.style.position = 'absolute';
+        btn.style.bottom = geraPosicao(10, 90);
+        btn.style.left = geraPosicao(10, 90);
+        console.log('opa, desviei...');
+    }
+
+    function geraPosicao(min, max) {
+        return (Math.random() * (max - min) + min) + "%";
+    }
+
+</script>
+
+</html>
